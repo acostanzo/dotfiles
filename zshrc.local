@@ -1,0 +1,7 @@
+# Add to path
+PATH=$PATH:/usr/local/bin
+PYTHONPATH=/usr/local/bin
+
+# Add commands for asdf
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash

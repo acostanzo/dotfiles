@@ -1,0 +1,34 @@
+" Leader
+let mapleader = ","
+
+" Set the colorschemescheme
+colorscheme default
+
+" Keyboard Shorcuts
+nnoremap <leader>d :NERDTreeToggle<CR>
+nnoremap <leader>f :NERDTreeFind<CR>
+
+" Use silver searcher
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" UltiSnippet Trigger configuration
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
+
+" Turn off word wrapping
+set nowrap
+
+" Turn off case sensitive search
+set ignorecase
+
+" Enable case sensitivity on capital letter
+set smartcase
+
+" Enable system copy with ctrl+c from visual mode
+set clipboard=unnamed
+vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
+
+" Access colors present in 256 colorspace
+" let base16colorspace=256

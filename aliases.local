@@ -1,0 +1,2 @@
+# Restart webcam
+alias wtfc="sudo killall VDCAssistant"
