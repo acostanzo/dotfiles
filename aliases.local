@@ -1,2 +1,21 @@
 # Restart webcam
 alias wtfc="sudo killall VDCAssistant"
+
+# Byndle exec rake
+alias brake="bundle exec rake"
+
+# Setup all the test DB stuffs
+alias rdm="brake db:migrate; brake db:test:prepare; brake parallel:prepare"
+
+# Git
+alias gb="git branch"
+alias gco="git checkout"
+alias gpr="git pull --rebase origin"
+alias grbi="git rebase -i"
+alias gf="git fetch -p"
+alias gpo="git push origin"
+
+# Navigation
+alias cr="cd ~/Development/catch-and-release/catchandrelease"
+alias arbor="cd ~/Development/catch-and-release/arbor"
+alias crorm="cd ~/Development/catch-and-release/crorm"

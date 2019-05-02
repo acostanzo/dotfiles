@@ -12,10 +12,11 @@ nnoremap <leader>f :NERDTreeFind<CR>
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " UltiSnippet Trigger configuration
-let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<S-tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
 
 " Turn off word wrapping
 set nowrap
@@ -27,8 +28,43 @@ set ignorecase
 set smartcase
 
 " Enable system copy with ctrl+c from visual mode
-set clipboard=unnamed
+" set clipboard=unnamed
 vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
 
 " Access colors present in 256 colorspace
 let base16colorspace=256
+
+" Replace ctrlp with FZF
+nnoremap <C-P> :Files<CR>
+
+" Remap test helpers to use new leader key
+nnoremap <silent> <Leader>t :TestFile<CR>
+nnoremap <silent> <Leader>s :TestNearest<CR>
+nnoremap <silent> <Leader>l :TestLast<CR>
+nnoremap <silent> <Leader>a :TestSuite<CR>
+nnoremap <silent> <Leader>gt :TestVisit<CR>
+
+" Source VIMRC
+nnoremap <leader>r :source $MYVIMRC<cr>
+
+" Open from current folder
+nnoremap <leader>h :e %:h
+
+" Set that red bar you see over ther ->
+set textwidth=120
+set colorcolumn=+1
+
+" Allow gf to find files in the app/javascripts folder
+set path+=app/javascript
+
+" navigate tabs
+nmap <Leader>nt :tabnew<CR>
+map <leader><tab> :tabn <CR>
+map <leader>p<tab> : tabp <CR>
+
+" Make JS pretty on save and when you want
+let g:ale_linters = {'jsx': ['stylelint', 'eslint']}
+let g:ale_linter_aliases = {'jsx': 'css'}
+let g:ale_fix_on_save = 1
+let g:ale_completion_enabled = 1
+nnoremap <leader>f :ALEFix prettier<CR>

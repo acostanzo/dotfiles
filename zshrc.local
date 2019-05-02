@@ -1,7 +1,8 @@
 # Add to path
-PATH=$PATH:/usr/local/bin
-PYTHONPATH=/usr/local/bin
+export PATH="./bin:$(yarn global bin):$PATH"
 
 # Add commands for asdf
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+
+export GOPATH="$HOME/go"
