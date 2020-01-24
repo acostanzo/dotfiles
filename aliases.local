@@ -16,6 +16,7 @@ alias gf="git fetch -p"
 alias gpo="git push origin"
 
 # Navigation
-alias cr="cd ~/Development/catch-and-release/catchandrelease"
-alias arbor="cd ~/Development/catch-and-release/arbor"
-alias crorm="cd ~/Development/catch-and-release/crorm"
+alias lsp="cd ~/Projects/LifesaverPlasma"
+alias lsr="cd ~/Projects/LifesaverRails"
+alias lss="cd ~/Projects/LifesaverSupport"
+alias lsspc="cd ~/Projects/LifesaverSupport/plugin-lsvr-crm"

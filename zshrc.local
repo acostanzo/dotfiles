@@ -2,7 +2,11 @@
 export PATH="./bin:$(yarn global bin):$PATH"
 
 # Add commands for asdf
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+. /usr/local/opt/asdf/asdf.sh
+. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
 
 export GOPATH="$HOME/go"
+
+export PATH="$HOME/.bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

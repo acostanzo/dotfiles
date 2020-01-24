@@ -2,11 +2,11 @@
 let mapleader = ","
 
 " Set the colorschemescheme
-colorscheme default
+colorscheme nord
 
 " Keyboard Shorcuts
-nnoremap <leader>d :NERDTreeToggle<CR>
-nnoremap <leader>f :NERDTreeFind<CR>
+nnoremap <leader>D :NERDTreeToggle<CR>
+nnoremap <leader>F :NERDTreeFind<CR>
 
 " Use silver searcher
 let g:ackprg = 'ag --nogroup --nocolor --column'
@@ -44,14 +44,17 @@ nnoremap <silent> <Leader>l :TestLast<CR>
 nnoremap <silent> <Leader>a :TestSuite<CR>
 nnoremap <silent> <Leader>gt :TestVisit<CR>
 
+" Execute the test script in the pacakge.json via yarn
+let test#javascript#jest#executable = 'yarn test'
+
 " Source VIMRC
 nnoremap <leader>r :source $MYVIMRC<cr>
 
 " Open from current folder
 nnoremap <leader>h :e %:h
 
-" Set that red bar you see over ther ->
-set textwidth=120
+" Set that red bar you see over there ->
+set textwidth=80
 set colorcolumn=+1
 
 " Allow gf to find files in the app/javascripts folder
@@ -67,4 +70,7 @@ let g:ale_linters = {'jsx': ['stylelint', 'eslint']}
 let g:ale_linter_aliases = {'jsx': 'css'}
 let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
-nnoremap <leader>f :ALEFix prettier<CR>
+let g:airline#extensions#ale#enabled = 1
+
+nnoremap <silent> <leader>f :ALEFindReferences<CR>
+nnoremap <silent> <Leader>d :ALEGoToDefinition<CR>
