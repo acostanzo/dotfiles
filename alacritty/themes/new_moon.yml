@@ -1,0 +1,26 @@
+# Colors - New Moon
+colors:
+  # Default colors
+  primary:
+    background: '0x2D2D2D'
+    foreground: '0xB3B9C5'
+  # Normal colors
+  normal:
+    black: '0x2D2D2D'
+    red: '0xF2777A'
+    green: '0x92D192'
+    yellow: '0xFFD479'
+    blue: '0x6AB0F3'
+    magenta: '0xE1A6F2'
+    cyan: '0x76D4D6'
+    white: '0xB3B9C5'
+  # Bright colors
+  bright:
+    black: '0x777C85'
+    red: '0xF2777A'
+    green: '0x76D4D6'
+    yellow: '0xFFEEA6'
+    blue: '0x6AB0F3'
+    magenta: '0xE1A6F2'
+    cyan: '0x76D4D6'
+    white: '0xFFFFFF'
