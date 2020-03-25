@@ -1,5 +1,14 @@
+# Brew - Configuring Completions in zsh
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
 # Add to path
 export PATH="./bin:$(yarn global bin):$PATH"
+export PATH="$HOME/Library/Android/sdk:$PATH"
 
 # Add commands for asdf
 . /usr/local/opt/asdf/asdf.sh

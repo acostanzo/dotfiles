@@ -10,6 +10,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'jparise/vim-graphql'
 Plug 'scrooloose/nerdtree'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 UnPlug 'ctrlp.vim'
 UnPlug 'fatih/vim-go'
