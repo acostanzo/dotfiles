@@ -16,7 +16,6 @@ alias gf="git fetch -p"
 alias gpo="git push origin"
 
 # Navigation
-alias lsp="cd ~/Projects/LifesaverPlasma"
+alias lsp="cd ~/Projects/Parachute"
 alias lsr="cd ~/Projects/BuoyRails"
 alias lss="cd ~/Projects/LifesaverSupport"
-alias lsspc="cd ~/Projects/LifesaverSupport/plugin-lsvr-crm"
