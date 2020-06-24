@@ -1,43 +1,25 @@
-" Leader
+let base16colorspace=256
 let mapleader = ","
 
-" Set the colorschemescheme
-colorscheme nord
+nnoremap <leader>w <C-w>v<C-w>l
 
-" Keyboard Shorcuts
-nnoremap <leader>D :NERDTreeToggle<CR>
-nnoremap <leader>F :NERDTreeFind<CR>
-
-" Use silver searcher
-let g:ackprg = 'ag --nogroup --nocolor --column'
-
-" UltiSnippet Trigger configuration
-let g:UltiSnipsExpandTrigger="<S-tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
-
-" Turn off word wrapping
+" Disable wordwrap
 set nowrap
 
-" Turn off case sensitive search
-set ignorecase
+set list  " Shows invisible characters
+set listchars=tab:▸\ ,eol:¬
 
-" Enable case sensitivity on capital letter
-set smartcase
+set t_Co=256
+set background=dark
+set colorcolumn=80
+colorscheme nord
 
-" Enable system copy with ctrl+c from visual mode
-" set clipboard=unnamed
-vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
+" navigate tabs
+nmap <Leader>nt :tabnew<CR>
+map <leader><tab> :tabn <CR>
+map <leader>p<tab> :tabp <CR>
 
-" Access colors present in 256 colorspace
-let base16colorspace=256
-
-" Replace ctrlp with FZF
-nnoremap <C-P> :Files<CR>
-
-" Remap test helpers to use new leader key
+" Remap to use new leader key
 nnoremap <silent> <Leader>t :TestFile<CR>
 nnoremap <silent> <Leader>ut :TestFile -u<CR>
 nnoremap <silent> <Leader>s :TestNearest<CR>
@@ -46,33 +28,68 @@ nnoremap <silent> <Leader>l :TestLast<CR>
 nnoremap <silent> <Leader>a :TestSuite<CR>
 nnoremap <silent> <Leader>gt :TestVisit<CR>
 
-" Execute the test script in the pacakge.json via yarn
-let test#javascript#jest#executable = 'yarn test'
+let g:indentobject_meaningful_indentation = ['haml', 'sass', 'yaml', 'markdown']
+let g:indentLine_fileType = ['yaml']
 
-" Source VIMRC
+" Python configuration
+au FileType python setl sw=4 et ts=8 sts=4
+
 nnoremap <leader>r :source $MYVIMRC<cr>
-
-" Open from current folder
 nnoremap <leader>h :e %:h
 
-" Set that red bar you see over there ->
-set textwidth=80
-set colorcolumn=+1
+" Replace ctrlp with FZF
+nnoremap <C-P> :Files<CR>
 
-" Allow gf to find files in the app/javascripts folder
 set path+=app/javascript
 
-" navigate tabs
-nmap <Leader>nt :tabnew<CR>
-map <leader><tab> :tabn <CR>
-map <leader>p<tab> : tabp <CR>
+let g:rails_projections = {
+      \ "spec/javascript/*.spec.jsx": { "alternate": "app/javascript/{}.jsx" },
+      \ "app/javascript/*.jsx": { "alternate": "spec/javascript/{}.spec.jsx" },
+      \ "spec/javascript/*.spec.js": { "alternate": "app/javascript/{}.js" },
+      \ "app/javascript/*.js": { "alternate": "spec/javascript/{}.spec.js" }
+      \ }
 
-" Make JS pretty on save and when you want
-let g:ale_linters = {'jsx': ['stylelint', 'eslint']}
-let g:ale_linter_aliases = {'jsx': 'css'}
-let g:ale_fix_on_save = 1
-let g:ale_completion_enabled = 1
-let g:airline#extensions#ale#enabled = 1
+augroup FiletypeGroup
+  autocmd!
+  au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
+augroup END
 
-nnoremap <silent> <leader>f :ALEFindReferences<CR>
-nnoremap <silent> <Leader>d :ALEGoToDefinition<CR>
+autocmd! VimResized
+autocmd VimResized * :wincmd =
+
+nmap <silent> <leader>f <Plug>(coc-definition)
+nmap <silent> <Leader>d <Plug>(coc-type-definition)
+
+let test#javascript#jest#executable = 'yarn test'
+
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+
+let g:coc_global_extensions = [
+  \ 'coc-tsserver',
+  \ 'coc-prettier',
+  \ 'coc-eslint'
+\ ]
+
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+" Tab complete with COC
+inoremap <silent><expr> <TAB>
+  \ pumvisible() ? "\<C-n>" :
+  \ <SID>check_back_space() ? "\<TAB>" :
+  \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+set updatetime=300
+
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+nmap <leader>do <Plug>(coc-codeaction)
