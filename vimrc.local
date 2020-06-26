@@ -3,6 +3,10 @@ let mapleader = ","
 
 nnoremap <leader>w <C-w>v<C-w>l
 
+" NERDTree
+ nnoremap <leader>D :NERDTreeToggle<CR>
+ nnoremap <leader>F :NERDTreeFind<CR>
+
 " Disable wordwrap
 set nowrap
 
@@ -58,7 +62,7 @@ autocmd! VimResized
 autocmd VimResized * :wincmd =
 
 nmap <silent> <leader>f <Plug>(coc-definition)
-nmap <silent> <Leader>d <Plug>(coc-type-definition)
+nmap <silent> <leader>d <Plug>(coc-type-definition)
 
 let test#javascript#jest#executable = 'yarn test'
 

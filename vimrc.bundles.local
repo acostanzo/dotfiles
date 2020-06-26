@@ -1,19 +1,21 @@
-Plug 'chriskempson/base16-vim'
 Plug 'arcticicestudio/nord-vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-UnPlug 'ctrlp.vim'
+Plug 'chriskempson/base16-vim'
+Plug 'jparise/vim-graphql'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'leafgarland/typescript-vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'peitalin/vim-jsx-typescript'
-Plug 'jparise/vim-graphql'
+Plug 'scrooloose/nerdtree'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-UnPlug 'fatih/vim-go'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+UnPlug 'ctrlp.vim'
 UnPlug 'elixir-lang/vim-elixir'
+UnPlug 'fatih/vim-go'
 UnPlug 'slim-template/vim-slim'
-UnPlug 'w0rp/ale'
+UnPlug 'tpope/vim-bundler'
 UnPlug 'tpope/vim-fugitive'
 UnPlug 'tpope/vim-rhubarb'
-UnPlug 'tpope/vim-bundler'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+UnPlug 'w0rp/ale'
