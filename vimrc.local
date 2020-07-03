@@ -4,8 +4,8 @@ let mapleader = ","
 nnoremap <leader>w <C-w>v<C-w>l
 
 " NERDTree
- nnoremap <leader>D :NERDTreeToggle<CR>
- nnoremap <leader>F :NERDTreeFind<CR>
+nnoremap <leader>D :NERDTreeToggle<CR>
+nnoremap <leader>F :NERDTreeFind<CR>
 
 " Disable wordwrap
 set nowrap
@@ -97,3 +97,12 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 nmap <leader>do <Plug>(coc-codeaction)
+
+" yank to clipboard
+if has("clipboard")
+  set clipboard=unnamed " copy to the system clipboard
+
+  if has("unnamedplus") " X11 support
+    set clipboard+=unnamedplus
+  endif
+endif
