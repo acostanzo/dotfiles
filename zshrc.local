@@ -18,3 +18,5 @@ export GOPATH="$HOME/go"
 export PATH="$HOME/.bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+ulimit -n 1024
