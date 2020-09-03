@@ -16,6 +16,8 @@ alias gf="git fetch -p"
 alias gpo="git push origin"
 
 # Navigation
-alias lsp="cd ~/Projects/Parachute"
-alias lsr="cd ~/Projects/BuoyRails"
-alias lss="cd ~/Projects/LifesaverSupport"
+alias lsa="cd ~/Projects/BuoySoftware/Ahoy"
+alias lsp="cd ~/Projects/BuoySoftware/Parachute"
+alias lsr="cd ~/Projects/BuoySoftware/BuoyRails"
+alias lsri="cd ~/Projects/BuoySoftware/Rigger"
+alias lss="cd ~/Projects/BuoySoftware/LifesaverSupport"
