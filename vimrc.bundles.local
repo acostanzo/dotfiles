@@ -10,6 +10,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'ryanoasis/vim-devicons'
+
 
 UnPlug 'ctrlp.vim'
 UnPlug 'elixir-lang/vim-elixir'
