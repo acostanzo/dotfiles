@@ -9,13 +9,15 @@ fi
 # Add to path
 export PATH="./bin:$(yarn global bin):$PATH"
 export PATH="$HOME/Library/Android/sdk:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="$HOME/.bin:$PATH"
+export GOPATH="$HOME/go"
 
 # Add commands for asdf
 . /usr/local/opt/asdf/asdf.sh
 
-export GOPATH="$HOME/go"
-
-export PATH="$HOME/.bin:$PATH"
+# Theme it
+source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
