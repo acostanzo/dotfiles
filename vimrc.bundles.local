@@ -11,6 +11,7 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
+Plug 'rafi/awesome-vim-colorschemes'
 
 
 UnPlug 'ctrlp.vim'
