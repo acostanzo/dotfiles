@@ -17,7 +17,7 @@ export GOPATH="$HOME/go"
 . /usr/local/opt/asdf/asdf.sh
 
 # Theme it
-source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
