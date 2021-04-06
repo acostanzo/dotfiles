@@ -13,6 +13,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'phanviet/vim-monokai-pro'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 
 UnPlug 'ctrlp.vim'
