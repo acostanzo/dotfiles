@@ -15,7 +15,7 @@ Plug 'rafi/awesome-vim-colorschemes'
 Plug 'phanviet/vim-monokai-pro'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-
+Plug 'mogelbrod/vim-jsonpath'
 
 UnPlug 'ctrlp.vim'
 UnPlug 'elixir-lang/vim-elixir'
