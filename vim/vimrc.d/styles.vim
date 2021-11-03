@@ -8,7 +8,7 @@ let base16colorspace=256
 set t_Co=256
 set background=dark
 set colorcolumn=80
-colorscheme onehalfdark
+colorscheme nord
 "
 let g:indentobject_meaningful_indentation = ['haml', 'sass', 'yaml', 'markdown']
 let g:indentLine_fileType = ['yaml']
