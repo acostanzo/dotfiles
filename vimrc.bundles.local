@@ -1,5 +1,4 @@
 Plug 'arcticicestudio/nord-vim'
-Plug 'chriskempson/base16-vim'
 Plug 'jparise/vim-graphql'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -11,11 +10,10 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
-Plug 'rafi/awesome-vim-colorschemes'
-Plug 'phanviet/vim-monokai-pro'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'mogelbrod/vim-jsonpath'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 UnPlug 'ctrlp.vim'
 UnPlug 'elixir-lang/vim-elixir'

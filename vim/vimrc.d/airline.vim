@@ -1,1 +1,1 @@
-let g:airline_theme = "nord"
+let g:airline_theme = "onehalfdark"

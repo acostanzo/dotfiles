@@ -9,4 +9,6 @@ unbind C-b
 set -g prefix C-a
 bind C-a send-prefix
 
-set -g default-terminal 'screen-256color'
+# Enable True Colors
+set -g default-terminal "tmux-256color"
+set -ga terminal-overrides ",*256col*:Tc"
