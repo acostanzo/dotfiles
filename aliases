@@ -33,7 +33,7 @@ alias gf="git fetch -p"
 alias gpo="git push origin"
 
 # Navigation
-alias dots="cd ~/dotfiles-local"
+alias dots="cd ~/dotfiles"
 alias jp="cd ~/Projects/BuoySoftware/JoinParachute"
 alias lsa="cd ~/Projects/BuoySoftware/Ahoy"
 alias lsp="cd ~/Projects/BuoySoftware/Parachute"
