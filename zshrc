@@ -52,6 +52,7 @@ fi
 export PATH="./bin:$(yarn global bin):$PATH"
 export PATH="$HOME/Library/Android/sdk:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.bin:$PATH"
 export GOPATH="$HOME/go"
 export TERM=xterm-color
