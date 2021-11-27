@@ -58,7 +58,8 @@ export GOPATH="$HOME/go"
 export TERM=xterm-color
 
 # Add commands for asdf
-. /usr/local/opt/asdf/asdf.sh
+[[ -f /usr/local/opt/asdf/asdf.sh ]] && . /usr/local/opt/asdf/asdf.sh
+[[ -f /opt/homebrew/opt/asdf/libexec/asdf.sh ]] && . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # Theme it
 source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
