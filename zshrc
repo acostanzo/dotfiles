@@ -56,6 +56,8 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.bin:$PATH"
 export GOPATH="$HOME/go"
 export TERM=xterm-color
+export PORT=5001
+export EDITOR=nvim
 
 # Add commands for asdf
 [[ -f /usr/local/opt/asdf/asdf.sh ]] && . /usr/local/opt/asdf/asdf.sh
