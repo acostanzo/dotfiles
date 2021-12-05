@@ -1,5 +1,5 @@
 -- Customize leader key
-vim.g.mapleader = ","
+vim.g.mapleader = ','
 
 -- Set the behavior of tab
 vim.opt.tabstop = 2
@@ -21,7 +21,20 @@ vim.opt.splitright = true
 
 -- Easily identify the 80 column limit
 vim.opt.textwidth = 80
-vim.opt.colorcolumn = "+1"
+vim.opt.colorcolumn = '+1'
 
 -- Show line numbers
 vim.opt.number = true
+
+-- Nerd Tree Bindings
+vim.api.nvim_set_keymap('n', '<Leader>D', ':NERDTreeToggle<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<Leader>F', ':NERDTreeFind<CR>', {noremap = true})
+
+-- Install Plugins
+local Plug = vim.fn['plug#']
+
+vim.call('plug#begin', '~/.config/nvim/plugged')
+
+Plug('scrooloose/nerdtree')
+
+vim.call('plug#end')
