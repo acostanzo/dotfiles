@@ -30,11 +30,10 @@ vim.opt.number = true
 vim.api.nvim_set_keymap('n', '<Leader>D', ':NERDTreeToggle<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<Leader>F', ':NERDTreeFind<CR>', {noremap = true})
 
--- Install Plugins
-local Plug = vim.fn['plug#']
-
-vim.call('plug#begin', '~/.config/nvim/plugged')
-
-Plug('scrooloose/nerdtree')
-
-vim.call('plug#end')
+-- Install Plugins via Packer
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  augroup end
+]])
