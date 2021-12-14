@@ -66,3 +66,13 @@ vim.cmd([[
     autocmd BufRead,BufNewFile */zsh/configs/* set filetype=sh
   augroup END
 ]])
+
+-- fzf
+vim.api.nvim_set_keymap(
+  'n', '<c-P>',
+  "<cmd>lua require('fzf-lua').files()<CR>",
+  {
+    noremap = true,
+    silent = true
+  }
+)
