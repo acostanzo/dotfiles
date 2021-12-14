@@ -11,6 +11,8 @@ return require('packer').startup(function(use)
 
   -- My plugins here
   use 'scrooloose/nerdtree'
+  use { 'ibhagwan/fzf-lua', requires = { 'kyazdani42/nvim-web-devicons' } }
+  
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
