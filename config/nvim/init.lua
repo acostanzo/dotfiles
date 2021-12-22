@@ -1,43 +1,4 @@
--- Customize leader key
-vim.g.mapleader = ','
-
--- Set the behavior of tab
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.softtabstop = 2
-vim.opt.expandtab = true
-
--- Automatically :write before running commands
-vim.opt.autowrite = true
-
--- Disable line wrapping
-vim.opt.wrap = false
-
--- Disable backups/swap files
-vim.opt.backup = false
-vim.opt.writebackup = false
-vim.opt.swapfile = false
-
--- Command lookback history
-vim.opt.history = 50
-
--- Specify default split direction
-vim.opt.splitbelow = true
-vim.opt.splitright = true
-
--- Easily identify the 80 column limit
-vim.opt.textwidth = 80
-vim.opt.colorcolumn = '+1'
-
--- Show line numbers
-vim.opt.number = true
-
--- One space when joining lines ending in punctuation
-vim.opt.joinspaces = false
-
--- Nerd Tree Bindings
-vim.api.nvim_set_keymap('n', '<Leader>D', ':NERDTreeToggle<CR>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<Leader>F', ':NERDTreeFind<CR>', {noremap = true})
+require('settings')
 
 -- Install Plugins via Packer
 vim.cmd([[
@@ -76,3 +37,19 @@ vim.api.nvim_set_keymap(
     silent = true
   }
 )
+
+local function source_files_from_dir(directory)
+  for _, file in pairs(vim.fn.readdir(directory)) do
+    local file = directory .. '/' .. file
+    if vim.fn.filereadable(file) then
+      vim.fn.execute('source ' .. file)
+    end
+  end
+end
+
+-- load all additional configs
+local lua_config_dir = vim.fn.stdpath('config') .. '/lua'
+local config_dirs = { 'plugins', 'lsp' }
+for _, dir in pairs(config_dirs) do
+  source_files_from_dir(lua_config_dir .. '/' .. dir)
+end
