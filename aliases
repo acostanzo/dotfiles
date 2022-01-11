@@ -40,6 +40,7 @@ alias jp="cd ~/Projects/BuoySoftware/JoinParachute"
 alias lsa="cd ~/Projects/BuoySoftware/Ahoy"
 alias lsp="cd ~/Projects/BuoySoftware/Parachute"
 alias lsr="cd ~/Projects/BuoySoftware/BuoyRails"
+alias lsw="cd ~/Projects/BuoySoftware/Wharf"
 alias lsri="cd ~/Projects/BuoySoftware/Rigger"
 alias lss="cd ~/Projects/BuoySoftware/LifesaverSupport"
 
