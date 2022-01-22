@@ -55,7 +55,7 @@ export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.bin:$PATH"
 export GOPATH="$HOME/go"
-export TERM=xterm-color
+export TERM=xterm-256color-italic
 export PORT=5001
 export EDITOR=nvim
 
