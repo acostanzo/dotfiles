@@ -6,4 +6,7 @@ return function(use)
   use 'scrooloose/nerdtree'
   use { 'ibhagwan/fzf-lua', requires = { 'kyazdani42/nvim-web-devicons' } }
   use 'vim-test/vim-test'
+
+  -- Language Server
+  use 'neovim/nvim-lspconfig'
 end

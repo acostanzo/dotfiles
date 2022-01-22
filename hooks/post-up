@@ -24,3 +24,9 @@ rename the file to \`zprofile':
 
 MSG
 fi
+
+# Global NPM packages
+npm install -g typescript typescript-language-server
+
+# Gems for system
+gem install solargraph
