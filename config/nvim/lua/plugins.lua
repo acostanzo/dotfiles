@@ -11,6 +11,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim' 
 
   -- Utilities
+  use { 'airblade/vim-gitgutter' }
   use { 'ibhagwan/fzf-lua', requires = { 'kyazdani42/nvim-web-devicons' } }
   use { 'neovim/nvim-lspconfig' } -- Language Server
   use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
