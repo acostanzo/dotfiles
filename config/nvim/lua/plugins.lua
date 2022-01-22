@@ -20,4 +20,10 @@ return require('packer').startup(function(use)
 
   -- Themes
   use 'EdenEast/nightfox.nvim'
+
+  -- Tree Sitter syntax highlighting
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
 end)
