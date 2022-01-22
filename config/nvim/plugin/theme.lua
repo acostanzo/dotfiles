@@ -3,14 +3,14 @@ local nightfox = require('nightfox')
 -- This function set the configuration of nightfox. If a value is not passed in the setup function
 -- it will be taken from the default configuration above
 nightfox.setup({
-  fox = "nordfox", -- Which fox style should be applied
+  fox = "nightfox", -- Which fox style should be applied
   transparent = true, -- Disable setting the background color
-  alt_nc = false, -- Non current window bg to alt color see `hl-NormalNC`
+  alt_nc = true, -- Non current window bg to alt color see `hl-NormalNC`
   terminal_colors = true, -- Configure the colors used when opening :terminal
   styles = {
-    comments = "NONE", -- Style that is applied to comments: see `highlight-args` for options
-    functions = "NONE", -- Style that is applied to functions: see `highlight-args` for options
-    keywords = "NONE", -- Style that is applied to keywords: see `highlight-args` for options
+    comments = "italic", -- Style that is applied to comments: see `highlight-args` for options
+    functions = "bold,italic", -- Style that is applied to functions: see `highlight-args` for options
+    keywords = "bold", -- Style that is applied to keywords: see `highlight-args` for options
     strings = "NONE", -- Style that is applied to strings: see `highlight-args` for options
     variables = "NONE", -- Style that is applied to variables: see `highlight-args` for options
   },
