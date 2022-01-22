@@ -11,19 +11,13 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim' 
 
   -- Utilities
-  use 'scrooloose/nerdtree'
   use { 'ibhagwan/fzf-lua', requires = { 'kyazdani42/nvim-web-devicons' } }
-  use 'vim-test/vim-test'
-
-  -- Language Server
-  use 'neovim/nvim-lspconfig'
+  use { 'neovim/nvim-lspconfig' } -- Language Server
+  use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- Tree Sitter syntax highlighting
+  use { 'scrooloose/nerdtree' }
+  use { 'vim-test/vim-test' }
 
   -- Themes
-  use 'EdenEast/nightfox.nvim'
-
-  -- Tree Sitter syntax highlighting
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
-  }
+  use { 'EdenEast/nightfox.nvim' }
 end)
