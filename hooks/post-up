@@ -26,7 +26,15 @@ MSG
 fi
 
 # Global NPM packages
-npm install -g typescript typescript-language-server
+GlobalNodeModules=(
+  "typescript"
+  "typescript-language-server"
+)
+for NodeModule in "${GlobalNodeModules[@]}"; do
+  if [ `npm list -g | grep -c $NodeModule` -eq 0 ]; then
+    npm install -g $NodeModule --no-shrinkwrap
+  fi
+done
 
 # Gems for system
 gem install solargraph
