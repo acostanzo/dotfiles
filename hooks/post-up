@@ -37,4 +37,11 @@ for NodeModule in "${GlobalNodeModules[@]}"; do
 done
 
 # Gems for system
-gem install solargraph
+Gems=(
+  "solargraph"
+)
+for Gem in "${Gems[@]}"; do
+  if [ `gem list $Gem | grep -c $Gem` -eq 0 ]; then
+    gem install $Gem
+  fi
+done
