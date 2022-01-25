@@ -52,3 +52,6 @@ for Gem in "${Gems[@]}"; do
     gem install $Gem
   fi
 done
+
+# Enable italics in terminal
+tic "$HOME/.xterm-256color-italic.terminfo"
