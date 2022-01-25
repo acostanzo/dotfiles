@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
   use { 'scrooloose/nerdtree' }
   use { 'vim-test/vim-test' }
   use { 'terrortylor/nvim-comment' }
+  use { 'jose-elias-alvarez/null-ls.nvim' }
 
   -- Autocomplete
   use { 'hrsh7th/cmp-buffer' }

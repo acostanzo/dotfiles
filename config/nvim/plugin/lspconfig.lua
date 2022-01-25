@@ -35,6 +35,11 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
   buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
+  -- Disable formatting if enabled via null-ls
+  if client.name == "tsserver" then
+    client.resolved_capabilities.document_formatting = false
+    client.resolved_capabilities.document_range_formatting = false
+  end
 end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
