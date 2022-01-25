@@ -19,6 +19,15 @@ return require('packer').startup(function(use)
   use { 'scrooloose/nerdtree' }
   use { 'vim-test/vim-test' }
 
+  -- Autocomplete
+  use { 'hrsh7th/cmp-buffer' }
+  use { 'hrsh7th/cmp-cmdline' }
+  use { 'hrsh7th/cmp-nvim-lsp' }
+  use { 'hrsh7th/cmp-path' }
+  use { 'hrsh7th/nvim-cmp' }
+  use { 'dcampos/nvim-snippy' }
+  use { 'dcampos/cmp-snippy' }
+
   -- Themes
   use { 'EdenEast/nightfox.nvim' }
 end)
