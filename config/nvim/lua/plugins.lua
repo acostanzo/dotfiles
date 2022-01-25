@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- Tree Sitter syntax highlighting
   use { 'scrooloose/nerdtree' }
   use { 'vim-test/vim-test' }
+  use { 'terrortylor/nvim-comment' }
 
   -- Autocomplete
   use { 'hrsh7th/cmp-buffer' }
