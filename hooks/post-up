@@ -25,6 +25,13 @@ rename the file to \`zprofile':
 MSG
 fi
 
+# Install packer for nvim
+PackerPath="$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim"
+if [ ! -d "$PackerPath" ]; then
+  echo "Packer not found. Installing..."
+  git clone --depth 1 https://github.com/wbthomason/packer.nvim "$PackerPath"
+fi
+
 # Global NPM packages
 GlobalNodeModules=(
   "typescript"
