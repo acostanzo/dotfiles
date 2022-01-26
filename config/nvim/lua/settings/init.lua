@@ -1,8 +1,8 @@
 -- Customize leader key
-vim.g.mapleader = ','
+vim.g.mapleader = ","
 
 -- Copy to system clipboard
-vim.opt.clipboard = 'unnamed'
+vim.opt.clipboard = "unnamed"
 
 -- Set the behavior of tab
 vim.opt.tabstop = 2
@@ -30,10 +30,12 @@ vim.opt.splitright = true
 
 -- Easily identify the 80 column limit
 vim.opt.textwidth = 80
-vim.opt.colorcolumn = '+1'
+vim.opt.colorcolumn = "+1"
 
 -- Show line numbers
 vim.opt.number = true
 
 -- One space when joining lines ending in punctuation
 vim.opt.joinspaces = false
+
+vim.api.nvim_set_keymap("n", "<Leader>h", ":e %:h", { noremap = true })
