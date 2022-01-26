@@ -15,6 +15,8 @@ local mapping = {
 		c = cmp.mapping.close(),
 	}),
 	["<CR>"] = cmp.mapping.confirm({ select = true }),
+	["<Tab>"] = cmp.config.disable,
+	["<S-Tab>"] = cmp.config.disable,
 }
 
 cmp.setup({

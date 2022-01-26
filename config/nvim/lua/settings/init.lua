@@ -38,4 +38,5 @@ vim.opt.number = true
 -- One space when joining lines ending in punctuation
 vim.opt.joinspaces = false
 
+-- Edit from current file path
 vim.api.nvim_set_keymap("n", "<Leader>h", ":e %:h", { noremap = true })
