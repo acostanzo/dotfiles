@@ -1,4 +1,9 @@
 local cmp = require("cmp")
+local lspkind = require("lspkind")
+
+local formatting = {
+	format = lspkind.cmp_format(),
+}
 
 local mapping = {
 	["<C-j>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "c" }),
@@ -13,6 +18,7 @@ local mapping = {
 }
 
 cmp.setup({
+	formatting = formatting,
 	snippet = {
 		-- REQUIRED - you must specify a snippet engine
 		expand = function(args)
@@ -29,6 +35,7 @@ cmp.setup({
 })
 
 cmp.setup.cmdline("/", {
+	formatting = formatting,
 	mapping = mapping,
 	sources = {
 		{ name = "buffer" },
@@ -36,6 +43,7 @@ cmp.setup.cmdline("/", {
 })
 
 cmp.setup.cmdline(":", {
+	formatting = formatting,
 	mapping = mapping,
 	sources = cmp.config.sources({
 		{ name = "path" },
