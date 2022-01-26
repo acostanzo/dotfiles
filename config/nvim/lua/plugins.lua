@@ -22,6 +22,7 @@ return require("packer").startup(function(use)
 	use({ "terrortylor/nvim-comment" })
 	use({ "jose-elias-alvarez/null-ls.nvim" })
 	use({ "onsails/lspkind-nvim" })
+	use({ "blackCauldron7/surround.nvim" })
 
 	-- Autocomplete
 	use({ "hrsh7th/cmp-buffer" })
