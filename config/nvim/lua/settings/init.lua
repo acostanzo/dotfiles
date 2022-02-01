@@ -40,3 +40,8 @@ vim.opt.joinspaces = false
 
 -- Edit from current file path
 vim.api.nvim_set_keymap("n", "<Leader>h", ":e %:h", { noremap = true })
+
+-- Enter normal mode in terminal mode
+vim.api.nvim_set_keymap("t", "<C-]>", "<C-\\><C-N>", { noremap = true })
+vim.api.nvim_set_keymap("t", "<C-[>", "<C-\\><C-N>", { noremap = true })
+vim.api.nvim_set_keymap("t", "<ESC>", "<C-\\><C-N>", { noremap = true })
