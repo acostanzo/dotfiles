@@ -22,6 +22,7 @@ return require("packer").startup(function(use)
 	use({ "jose-elias-alvarez/null-ls.nvim" })
 	use({ "onsails/lspkind-nvim" })
 	use({ "tpope/vim-surround" })
+	use({ "mogelbrod/vim-jsonpath" })
 
 	-- Git
 	use({ "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } })
