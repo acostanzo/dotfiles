@@ -23,6 +23,7 @@ return require("packer").startup(function(use)
 	use({ "onsails/lspkind-nvim" })
 	use({ "tpope/vim-surround" })
 	use({ "mogelbrod/vim-jsonpath" })
+	use({ "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" })
 
 	-- Git
 	use({ "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } })
