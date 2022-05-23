@@ -1,4 +1,4 @@
-[init]
+[init]bufline
   defaultBranch = main
   templatedir = ~/.git_template
 [push]
@@ -29,3 +29,5 @@
 [user]
   name = "Anthony Costanzo"
   email = memberships@acostanzo.com
+[pull]
+	ff = only

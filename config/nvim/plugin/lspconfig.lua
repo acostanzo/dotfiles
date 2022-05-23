@@ -58,3 +58,13 @@ for _, lsp in ipairs(servers) do
 		},
 	})
 end
+
+nvim_lsp.sumneko_lua.setup({
+	settings = {
+		Lua = {
+			diagnostics = {
+				globals = { "vim" },
+			},
+		},
+	},
+})
