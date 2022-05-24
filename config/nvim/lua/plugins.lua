@@ -11,39 +11,28 @@ return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	-- Utilities
-	use({ "kyazdani42/nvim-tree.lua", requires = { "kyazdani42/nvim-web-devicons" } })
-	use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } })
-	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+	use({ "jose-elias-alvarez/null-ls.nvim" }) -- Bridge for non-LSP sources to hook into the language server
+	use({ "kyazdani42/nvim-tree.lua", requires = { "kyazdani42/nvim-web-devicons" } }) -- File Explorer
+	use({ "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } }) -- Display Git indicators in gutter
+	use({ "mogelbrod/vim-jsonpath" }) -- Easily view the full dot path of a JSON node
 	use({ "neovim/nvim-lspconfig" }) -- Language Server
-	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
+	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } }) -- Bottom status line
+	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- Fuzzy find
+	use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } }) -- Fuzzy find
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) -- Tree Sitter syntax highlighting
-	use({ "vim-test/vim-test" })
-	use({ "terrortylor/nvim-comment" })
-	use({ "jose-elias-alvarez/null-ls.nvim" })
-	use({ "onsails/lspkind-nvim" })
-	use({ "tpope/vim-surround" })
-	use({ "mogelbrod/vim-jsonpath" })
-	use({ "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" })
-
-	-- Git
-	use({ "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } })
-	use({
-		"pwntester/octo.nvim",
-		requires = {
-			"nvim-lua/plenary.nvim",
-			"nvim-telescope/telescope.nvim",
-			"kyazdani42/nvim-web-devicons",
-		},
-	})
+	use({ "onsails/lspkind-nvim" }) -- Pictograms for built-in LSP
+	use({ "terrortylor/nvim-comment" }) -- Language based commenting
+	use({ "tpope/vim-surround" }) -- Extensive "surround" support for parentheses, quotes, tags, etc.
+	use({ "vim-test/vim-test" }) -- Run tests from within test file
 
 	-- Autocomplete
-	use({ "hrsh7th/cmp-buffer" })
-	use({ "hrsh7th/cmp-cmdline" })
-	use({ "hrsh7th/cmp-nvim-lsp" })
-	use({ "hrsh7th/cmp-path" })
-	use({ "hrsh7th/nvim-cmp" })
-	use({ "dcampos/nvim-snippy" })
-	use({ "dcampos/cmp-snippy" })
+	use({ "dcampos/cmp-snippy" }) -- Autocomplete plugin for snippy snippets
+	use({ "dcampos/nvim-snippy" }) -- Language based snippets
+	use({ "hrsh7th/cmp-buffer" }) -- Autocomplete support for words in buffers
+	use({ "hrsh7th/cmp-cmdline" }) -- Autocomplete support for neovim command line
+	use({ "hrsh7th/cmp-nvim-lsp" }) -- Autocomplete support for language server
+	use({ "hrsh7th/cmp-path" }) -- Autocomplete support for filesystem paths
+	use({ "hrsh7th/nvim-cmp" }) -- Autocompletion engine
 
 	-- Themes
 	use({ "EdenEast/nightfox.nvim" })
