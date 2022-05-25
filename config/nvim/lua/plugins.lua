@@ -23,7 +23,9 @@ return require("packer").startup(function(use)
 	use({ "onsails/lspkind-nvim" }) -- Pictograms for built-in LSP
 	use({ "terrortylor/nvim-comment" }) -- Language based commenting
 	use({ "tpope/vim-surround" }) -- Extensive "surround" support for parentheses, quotes, tags, etc.
+	use({ "tpope/vim-fugitive" }) -- Git commands - most notably :Gblame
 	use({ "vim-test/vim-test" }) -- Run tests from within test file
+	use({ "jghauser/mkdir.nvim" }) -- Make directories when saving file
 
 	-- Autocomplete
 	use({ "dcampos/cmp-snippy" }) -- Autocomplete plugin for snippy snippets

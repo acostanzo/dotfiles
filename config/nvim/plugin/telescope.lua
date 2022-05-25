@@ -2,11 +2,11 @@ local telescope = require("telescope")
 local actions = require("telescope.actions")
 local builtin = require("telescope.builtin")
 
-vim.api.nvim_set_keymap("n", "<C-p>", "<cmd>lua require('telescope.builtin').git_files()<cr>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<C-b>", "<cmd>lua require('telescope.builtin').buffers()<cr>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", { noremap = true })
+KB("n", "<C-p>", "<cmd>lua require('telescope.builtin').git_files()<cr>")
+KB("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>")
+KB("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>")
+KB("n", "<C-b>", "<cmd>lua require('telescope.builtin').buffers()<cr>")
+KB("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>")
 
 telescope.setup({
 	defaults = {

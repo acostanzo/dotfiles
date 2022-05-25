@@ -1,7 +1,7 @@
 local nvim_tree = require("nvim-tree")
 
-vim.api.nvim_set_keymap("n", "<Leader>D", ":NvimTreeToggle<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<Leader>F", ":NvimTreeFindFile<CR>", { noremap = true })
+KB("n", "<Leader>D", ":NvimTreeToggle<CR>")
+KB("n", "<Leader>F", ":NvimTreeFindFile<CR>")
 
 nvim_tree.setup({
 	hijack_cursor = true,
