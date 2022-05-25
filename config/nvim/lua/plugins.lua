@@ -11,6 +11,8 @@ return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	-- Utilities
+	use({ "arkav/lualine-lsp-progress" }) -- Lualine plugin for LSP index progress
+	use({ "jghauser/mkdir.nvim" }) -- Make directories when saving file
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- Bridge for non-LSP sources to hook into the language server
 	use({ "kyazdani42/nvim-tree.lua", requires = { "kyazdani42/nvim-web-devicons" } }) -- File Explorer
 	use({ "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } }) -- Display Git indicators in gutter
@@ -22,10 +24,9 @@ return require("packer").startup(function(use)
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) -- Tree Sitter syntax highlighting
 	use({ "onsails/lspkind-nvim" }) -- Pictograms for built-in LSP
 	use({ "terrortylor/nvim-comment" }) -- Language based commenting
-	use({ "tpope/vim-surround" }) -- Extensive "surround" support for parentheses, quotes, tags, etc.
 	use({ "tpope/vim-fugitive" }) -- Git commands - most notably :Gblame
+	use({ "tpope/vim-surround" }) -- Extensive "surround" support for parentheses, quotes, tags, etc.
 	use({ "vim-test/vim-test" }) -- Run tests from within test file
-	use({ "jghauser/mkdir.nvim" }) -- Make directories when saving file
 
 	-- Autocomplete
 	use({ "dcampos/cmp-snippy" }) -- Autocomplete plugin for snippy snippets
