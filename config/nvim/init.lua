@@ -1,2 +1,3 @@
-require('settings')
-require('plugins')
+require("utilities")
+require("settings")
+require("plugins")

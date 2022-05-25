@@ -1,4 +1,4 @@
-vim.api.nvim_set_keymap("n", "gb", ":Gitsigns blame_line<CR>", { noremap = true })
+KB("n", "gb", ":Gitsigns blame_line<CR>")
 
 require("gitsigns").setup({
 	signs = {
