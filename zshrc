@@ -56,7 +56,6 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.bin:$PATH"
 export GOPATH="$HOME/go"
 export TERM=xterm-256color-italic
-export PORT=5001
 export EDITOR=nvim
 
 # Add commands for asdf
