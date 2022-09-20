@@ -8,7 +8,8 @@ local sources = {
 	formatting.prettierd,
 	formatting.stylua,
 	code_actions.eslint_d,
-	diagnostics.eslint_d,
+	diagnostics.eslint_d.with({ extra_filetypes = { "graphql" } }),
+	diagnostics.rubocop,
 }
 
 local on_attach = function(client)

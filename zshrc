@@ -50,13 +50,17 @@ fi
 
 # Add to path
 export PATH="./bin:$(yarn global bin):$PATH"
-export PATH="$HOME/Library/Android/sdk:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.bin:$PATH"
 export GOPATH="$HOME/go"
 export TERM=xterm-256color-italic
 export EDITOR=nvim
+
+# Android Development
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
 # Add commands for asdf
 [[ -f /usr/local/opt/asdf/asdf.sh ]] && . /usr/local/opt/asdf/asdf.sh

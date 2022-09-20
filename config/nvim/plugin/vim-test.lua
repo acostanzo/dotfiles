@@ -9,5 +9,4 @@ vim.cmd([[
   let g:test#basic#start_normal = 1 " If using basic strategy
   let g:test#neovim#start_normal = 1 " If using neovim strategy
   let test#javascript#executable = "yarn test"
-  let test#strategy = "vtr"
 ]])
