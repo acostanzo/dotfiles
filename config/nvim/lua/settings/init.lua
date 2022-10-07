@@ -2,7 +2,7 @@
 vim.g.mapleader = ","
 
 -- Copy to system clipboard
-vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard = "unnamed"
 
 -- Set the behavior of tab
 vim.opt.tabstop = 2
