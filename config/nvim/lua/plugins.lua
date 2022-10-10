@@ -12,6 +12,8 @@ return require("packer").startup(function(use)
 
 	-- Utilities
 	use({ "arkav/lualine-lsp-progress" }) -- Lualine plugin for LSP index progress
+	use({ "aserowy/tmux.nvim" }) -- Seamless navigation between nvim and tmux
+	use({ "christoomey/vim-tmux-runner" }) -- Run tests in tmux split
 	use({ "jghauser/mkdir.nvim" }) -- Make directories when saving file
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- Bridge for non-LSP sources to hook into the language server
 	use({ "kyazdani42/nvim-tree.lua", requires = { "kyazdani42/nvim-web-devicons" } }) -- File Explorer

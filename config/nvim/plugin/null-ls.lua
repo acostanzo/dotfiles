@@ -13,7 +13,7 @@ local sources = {
 }
 
 local on_attach = function(client)
-	if client.server_capabilities.document_formatting then
+	if client.resolved_capabilities.document_formatting then
 		vim.cmd([[
       augroup LspFormatting
         autocmd! * <buffer>
