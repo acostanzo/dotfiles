@@ -63,8 +63,9 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
 # Add commands for asdf
-[[ -f /usr/local/opt/asdf/asdf.sh ]] && . /usr/local/opt/asdf/asdf.sh
-[[ -f /opt/homebrew/opt/asdf/libexec/asdf.sh ]] && . /opt/homebrew/opt/asdf/libexec/asdf.sh
+[[ -f /usr/local/opt/asdf/libexec/asdf.sh ]] && . /usr/local/opt/asdf/libexec/asdf.sh
+[[ -f ~/.asdf/plugins/java/set-java-home.zsh ]] && . ~/.asdf/plugins/java/set-java-home.zsh
+
 
 # Theme powerlevel10k
 source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
