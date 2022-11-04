@@ -11,5 +11,9 @@ module.exports = {
       match: /calendar/,
       browser: "Google Chrome",
     },
+    {
+      match: /docs\.google/,
+      browser: "Google Chrome",
+    },
   ],
 };
