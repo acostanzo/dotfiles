@@ -2,6 +2,10 @@
 
 ## Installation
 
+Install [rcm](https://github.com/thoughtbot/rcm)
+
+    % brew install rcm
+
 On first install you need to specify the location of the `rcrc`. Future runs of
 `rcup` will know where there file is, since the initial run will symlink it.
 
