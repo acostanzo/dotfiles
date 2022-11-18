@@ -49,7 +49,6 @@ if type brew &>/dev/null; then
 fi
 
 # Add to path
-export PATH="./bin:$(yarn global bin):$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.bin:$PATH"
