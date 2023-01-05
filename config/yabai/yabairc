@@ -46,7 +46,11 @@ yabai -m config right_padding                12
 yabai -m config window_gap                   06
 
 # Ignore Apps
-yabai -m rule --add app="System Settings" sticky=on layer=above manage=off
-yabai -m rule --add app="1Password" sticky=on layer=above manage=off
+yabai -m rule --add app="1Password" sticky=off layer=above manage=off
+yabai -m rule --add app="Android\ Studio" sticky=off layer=above manage=off
+yabai -m rule --add app="App\ Store" sticky=off layer=above manage=off
+yabai -m rule --add app="Finder" sticky=off layer=above manage=off
+yabai -m rule --add app="System Settings" sticky=off layer=above manage=off
+yabai -m rule --add app="logioptionsplus" sticky=off layer=above manage=off
 
 echo "yabai configuration loaded.."
