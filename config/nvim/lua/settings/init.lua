@@ -45,3 +45,6 @@ KB("n", "<Leader>h", ":e %:h")
 KB("t", "<C-]>", "<C-\\><C-N>")
 KB("t", "<C-[>", "<C-\\><C-N>")
 KB("t", "<ESC>", "<C-\\><C-N>")
+
+-- Spellchecking
+vim.opt.spelllang = "en"

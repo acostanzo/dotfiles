@@ -5,11 +5,13 @@ local diagnostics = null_ls.builtins.diagnostics
 local formatting = null_ls.builtins.formatting
 
 local sources = {
-	formatting.prettierd,
-	formatting.stylua,
 	code_actions.eslint_d,
 	diagnostics.eslint_d.with({ extra_filetypes = { "graphql" } }),
 	diagnostics.rubocop,
+	formatting.prettierd,
+	formatting.stylua,
+  code_actions.cspell,
+  diagnostics.cspell,
 }
 
 local on_attach = function(client)
