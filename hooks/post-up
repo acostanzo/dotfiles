@@ -34,6 +34,7 @@ fi
 
 # Global NPM packages
 GlobalNodeModules=(
+  "npm"
   "@fsouza/prettierd"
   "cspell"
   "eslint_d"
