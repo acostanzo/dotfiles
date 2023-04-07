@@ -25,6 +25,18 @@ rename the file to \`zprofile':
 MSG
 fi
 
+# Homebrew requirements
+HomeBrewPackages=(
+  "lua-language-server"
+)
+for HomeBrewPackage in "${HomeBrewPackages[@]}"; do
+  if [ `which $HomeBrewPackage | grep -c "not found"` -eq 0 ]; then
+    brew install $HomeBrewPackage
+  else
+    brew upgrade $HomeBrewPackage
+  fi
+done
+
 # Install packer for nvim
 PackerPath="$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim"
 if [ ! -d "$PackerPath" ]; then

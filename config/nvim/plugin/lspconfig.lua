@@ -39,13 +39,13 @@ local on_attach = function(client, bufnr)
   nmap("<space>f", "<cmd>lua vim.lsp.buf.format { async = true }<CR>")
 
   -- Auto format specific clients on save
-  if TableContains({ "eslint", "sumneko_lua" }, client.name) then
+  if TableContains({ "eslint", "lua_ls" }, client.name) then
     vim.cmd([[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]])
   end
 end
 
 local settings = {
-  sumneko_lua = {
+  lua_ls = {
     Lua = {
       diagnostics = {
         globals = { "vim", "KB", "TableContains" },
@@ -58,8 +58,8 @@ local settings = {
 -- map buffer local keybindings when the language server attaches
 local clients = {
   eslint = true,
+  lua_ls = true,
   solargraph = true,
-  sumneko_lua = true,
   tsserver = true,
 }
 for client, enabled in pairs(clients) do
