@@ -30,19 +30,26 @@ HomeBrewPackages=(
   "lua-language-server"
   "reattach-to-user-namespace"
 )
-# for HomeBrewPackage in "${HomeBrewPackages[@]}"; do
-#   if [ `which $HomeBrewPackage | grep -c "not found"` -eq 0 ]; then
-#     brew install $HomeBrewPackage
-#   else
-#     brew upgrade $HomeBrewPackage
-#   fi
-# done
+for HomeBrewPackage in "${HomeBrewPackages[@]}"; do
+  if [ `which $HomeBrewPackage | grep -c "not found"` -eq 0 ]; then
+    brew install $HomeBrewPackage
+  else
+    brew upgrade $HomeBrewPackage
+  fi
+done
 
 # Install packer for nvim
 PackerPath="$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim"
 if [ ! -d "$PackerPath" ]; then
   echo "Packer not found. Installing..."
   git clone --depth 1 https://github.com/wbthomason/packer.nvim "$PackerPath"
+fi
+
+# Install tmux package manager
+TPMPath="$HOME/.tmux/plugins/tpm"
+if [ ! -d "$TPMPath" ]; then
+  echo "tpm not found. Installing..."
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
 
 # Global NPM packages
