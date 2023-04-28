@@ -12,7 +12,6 @@ return require("packer").startup(function(use)
 
   -- Utilities
   use({ "arkav/lualine-lsp-progress" })                                                           -- Lualine plugin for LSP index progress
-  use({ "aserowy/tmux.nvim" })                                                                    -- Seamless navigation between nvim and tmux
   use({ "jghauser/mkdir.nvim" })                                                                  -- Make directories when saving file
   use({ "jose-elias-alvarez/null-ls.nvim" })                                                      -- Bridge for non-LSP sources to hook into the language server
   use({ "kyazdani42/nvim-tree.lua", requires = { "kyazdani42/nvim-web-devicons" } })              -- File Explorer
@@ -30,6 +29,9 @@ return require("packer").startup(function(use)
   use({ "tpope/vim-surround" })                                                                   -- Extensive "surround" support for parentheses, quotes, tags, etc.
   use({ "vim-test/vim-test" })                                                                    -- Run tests from within test file
 
+  -- Seamless Tmux
+  use({ "christoomey/vim-tmux-navigator" })
+
   -- Autocomplete
   use({ "dcampos/cmp-snippy" })   -- Autocomplete plugin for snippy snippets
   use({ "dcampos/nvim-snippy" })  -- Language based snippets
@@ -41,4 +43,5 @@ return require("packer").startup(function(use)
 
   -- Themes
   use({ "EdenEast/nightfox.nvim" })
+  use({ "catppuccin/nvim", as = "catppuccin" })
 end)

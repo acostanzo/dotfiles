@@ -28,6 +28,7 @@ fi
 # Homebrew requirements
 HomeBrewPackages=(
   "lua-language-server"
+  "reattach-to-user-namespace"
 )
 # for HomeBrewPackage in "${HomeBrewPackages[@]}"; do
 #   if [ `which $HomeBrewPackage | grep -c "not found"` -eq 0 ]; then
