@@ -61,6 +61,7 @@ GlobalNodeModules=(
   "eslint_d"
   "typescript"
   "typescript-language-server"
+  "vscode-langservers-extracted"
 )
 for NodeModule in "${GlobalNodeModules[@]}"; do
   if [ `npm list -g | grep -c $NodeModule` -eq 0 ]; then
