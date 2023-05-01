@@ -48,3 +48,6 @@ KB("t", "<ESC>", "<C-\\><C-N>")
 
 -- Spellchecking
 vim.opt.spelllang = "en"
+
+-- Single status bar line
+vim.opt.laststatus = 3
