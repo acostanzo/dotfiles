@@ -1,0 +1,53 @@
+#!/bin/sh
+
+touch "$HOME"/.psqlrc.local
+
+reset -Q
+
+# Enable italics in terminal
+tic "$HOME/.xterm-256color-italic.terminfo"
+
+# Homebrew requirements
+HomeBrewPackages=(
+  "lua-language-server"
+  "reattach-to-user-namespace"
+)
+for HomeBrewPackage in "${HomeBrewPackages[@]}"; do
+  if [ `which $HomeBrewPackage | grep -c "not found"` -eq 0 ]; then
+    brew install $HomeBrewPackage
+  else
+    brew upgrade $HomeBrewPackage
+  fi
+done
+
+# Install tmux package manager
+TPMPath="$HOME/.tmux/plugins/tpm"
+if [ ! -d "$TPMPath" ]; then
+  echo "tpm not found. Installing..."
+  git clone https://github.com/tmux-plugins/tpm "$TPMPath"
+fi
+
+# Global NPM packages
+GlobalNodeModules=(
+  "npm"
+  "yarn"
+  "cspell"
+  "typescript"
+  "typescript-language-server"
+  "vscode-langservers-extracted"
+)
+for NodeModule in "${GlobalNodeModules[@]}"; do
+  if [ `npm list -g | grep -c $NodeModule` -eq 0 ]; then
+    npm install -g $NodeModule --no-shrinkwrap
+  fi
+done
+
+# Gems for system
+Gems=(
+  "solargraph"
+)
+for Gem in "${Gems[@]}"; do
+  if [ `gem list $Gem | grep -c $Gem` -eq 0 ]; then
+    gem install $Gem
+  fi
+done
