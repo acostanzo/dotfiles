@@ -1,2 +1,5 @@
--- vim.cmd("colorscheme nightfox")
+require("catppuccin").setup({
+  flavour = "macchiato"
+})
+
 vim.cmd("colorscheme catppuccin")
