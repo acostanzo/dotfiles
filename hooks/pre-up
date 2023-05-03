@@ -31,6 +31,7 @@ fi
 GlobalNodeModules=(
   "npm"
   "yarn"
+  "bash-language-server"
   "cspell"
   "typescript"
   "typescript-language-server"

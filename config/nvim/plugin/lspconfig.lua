@@ -57,6 +57,7 @@ local settings = {
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 local clients = {
+  bashls = true,
   eslint = true,
   lua_ls = true,
   solargraph = true,
