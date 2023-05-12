@@ -9,6 +9,7 @@ tic "$HOME/.xterm-256color-italic.terminfo"
 
 # Homebrew requirements
 HomeBrewPackages=(
+  "hashicorp/tap/terraform-ls"
   "lua-language-server"
   "reattach-to-user-namespace"
 )
