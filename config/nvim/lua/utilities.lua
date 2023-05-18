@@ -14,6 +14,22 @@ function TableContains(tbl, x)
   return found
 end
 
+function TableClone(source)
+  local clone = {}
+  for k, v in pairs(source) do
+    clone[k] = v
+  end
+  return clone
+end
+
+function TableSpread(source, tbl)
+  local merged = TableClone(source)
+  for k, v in pairs(tbl) do
+    merged[k] = v
+  end
+  return merged
+end
+
 function U.ensure_packer()
   local fn = vim.fn
   local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'

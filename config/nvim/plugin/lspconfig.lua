@@ -48,7 +48,7 @@ local settings = {
   lua_ls = {
     Lua = {
       diagnostics = {
-        globals = { "vim", "KB", "TableContains" },
+        globals = { "vim", "KB", "TableClone", "TableContains", "TableSpread" },
       },
     },
   },

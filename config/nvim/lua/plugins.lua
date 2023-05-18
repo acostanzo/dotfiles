@@ -16,6 +16,7 @@ packer.startup(function(use)
   use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } }) -- Bottom status line
   use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })                               -- Fuzzy find
   use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } })            -- Fuzzy find
+  use({ "nvim-telescope/telescope-symbols.nvim" })                                                -- Lualine plugin for LSP index progress
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })                                   -- Tree Sitter syntax highlighting
   use({ "onsails/lspkind-nvim" })                                                                 -- Pictograms for built-in LSP
   use({ "terrortylor/nvim-comment" })                                                             -- Language based commenting
