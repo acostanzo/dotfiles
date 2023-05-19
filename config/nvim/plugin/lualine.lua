@@ -1,3 +1,13 @@
+function FileNameFormatter(str)
+  local filename = str;
+
+  if string.match(str, "NvimTree") then
+    filename = "File Explorer"
+  end
+
+  return filename;
+end
+
 local branch = {
   {
     'branch',
@@ -22,6 +32,7 @@ local diff = {
 
 local filename = {
   'filename',
+  fmt = FileNameFormatter,
   symbols = {
     modified = '⦿ ',
     readonly = '󰛐 ',
@@ -49,7 +60,7 @@ local shared_winbar = {
 require("lualine").setup({
   options = {
     component_separators = { left = '', right = '' },
-    disabled_filetypes = { winbar = { 'packer', 'NvimTree' } },
+    disabled_filetypes = { winbar = { 'packer' } },
     section_separators = { left = '', right = '' },
   },
   sections = {
