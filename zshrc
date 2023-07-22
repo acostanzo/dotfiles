@@ -1,3 +1,6 @@
+# Fix issue running wharf - https://github.com/rails/rails/issues/38560
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -53,8 +56,13 @@ export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.bin:$PATH"
 export GOPATH="$HOME/go"
-export TERM=xterm-256color-italic
+# export TERM=xterm-256color-italic
 export EDITOR=nvim
+# Postgres setup
+export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/postgresql@13/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/postgresql@13/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/postgresql@13/lib/pkgconfig"
 
 # Android Development
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
