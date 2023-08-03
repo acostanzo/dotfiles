@@ -5,14 +5,23 @@ packer.startup(function(use)
   -- Packer can manage itself
   use("wbthomason/packer.nvim")
 
+  -- LSP Management with mason
+  use({
+    "jose-elias-alvarez/null-ls.nvim",
+    "mfussenegger/nvim-dap",
+    "neovim/nvim-lspconfig",
+    "rcarriga/nvim-dap-ui",
+    "williamboman/mason-lspconfig.nvim",
+    "williamboman/mason.nvim",
+  })
+
+
   -- Utilities
   use({ "arkav/lualine-lsp-progress" })                                                           -- Lualine plugin for LSP index progress
   use({ "jghauser/mkdir.nvim" })                                                                  -- Make directories when saving file
-  use({ "jose-elias-alvarez/null-ls.nvim" })                                                      -- Bridge for non-LSP sources to hook into the language server
   use({ "kyazdani42/nvim-tree.lua", requires = { "kyazdani42/nvim-web-devicons" } })              -- File Explorer
   use({ "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } })                      -- Display Git indicators in gutter
   use({ "mogelbrod/vim-jsonpath" })                                                               -- Easily view the full dot path of a JSON node
-  use({ "neovim/nvim-lspconfig" })                                                                -- Language Server
   use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } }) -- Bottom status line
   use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })                               -- Fuzzy find
   use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } })            -- Fuzzy find

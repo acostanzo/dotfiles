@@ -9,8 +9,6 @@ tic "$HOME/.xterm-256color-italic.terminfo"
 
 # Homebrew requirements
 HomeBrewPackages=(
-  "hashicorp/tap/terraform-ls"
-  "lua-language-server"
   "reattach-to-user-namespace"
 )
 for HomeBrewPackage in "${HomeBrewPackages[@]}"; do
@@ -32,11 +30,6 @@ fi
 GlobalNodeModules=(
   "npm"
   "yarn"
-  "bash-language-server"
-  "cspell"
-  "typescript"
-  "typescript-language-server"
-  "vscode-langservers-extracted"
 )
 for NodeModule in "${GlobalNodeModules[@]}"; do
   if [ `npm list -g | grep -c $NodeModule` -eq 0 ]; then
