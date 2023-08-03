@@ -1,25 +1,9 @@
-local clients = {
-  eslint = { format_on_save = true },
-  lua_ls = {
-    format_on_save = true,
-    lspconfig_settings = {
-      Lua = {
-        diagnostics = {
-          globals = { "vim", "KB", "TableClone", "TableContains", "TableSpread" },
-        },
-      },
-    }
-  },
-  marksman = {},
-  solargraph = {},
-  terraformls = { format_on_save = true },
-  vtsls = {},
-  yamlls = {},
-}
+local clients = dofile(CWD() .. "clients.lua")
 
 require("mason").setup()
 require("mason-lspconfig").setup({ ensure_installed = clients })
 local lspconfig = require('lspconfig')
+
 -- Setup capabilities for autocomplete
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)

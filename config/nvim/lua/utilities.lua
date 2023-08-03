@@ -1,5 +1,10 @@
 local U = {}
 
+function CWD()
+  local str = debug.getinfo(2, "S").source:sub(2)
+  return str:match("(.*/)")
+end
+
 function KB(mode, keyStroke, action, opts)
   vim.api.nvim_set_keymap(mode, keyStroke, action, opts or { noremap = true })
 end
