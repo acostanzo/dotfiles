@@ -56,7 +56,7 @@ export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.bin:$PATH"
 export GOPATH="$HOME/go"
-# export TERM=xterm-256color-italic
+export TERM=xterm-256color-italic
 export EDITOR=nvim
 # Postgres setup
 export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
