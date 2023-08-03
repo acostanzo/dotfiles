@@ -9,6 +9,10 @@ function KB(mode, keyStroke, action, opts)
   vim.api.nvim_set_keymap(mode, keyStroke, action, opts or { noremap = true })
 end
 
+function BKB(bufnr, mode, keyStroke, action, opts)
+  vim.api.nvim_buf_set_keymap(bufnr, mode, keyStroke, action, opts or { noremap = true, silent = true })
+end
+
 function TableContains(tbl, x)
   local found = false
   for _, v in pairs(tbl) do

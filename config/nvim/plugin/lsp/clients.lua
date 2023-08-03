@@ -6,6 +6,7 @@ local Clients = {
       Lua = {
         diagnostics = {
           globals = {
+            "BKB",
             "CWD",
             "KB",
             "TableClone",
