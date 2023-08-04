@@ -1,13 +1,15 @@
 local Clients = {
   cspell = {
-    code_actions = true,
-    diagnostics = true,
-    non_lsp = true,
+    null_ls = {
+      code_actions = true,
+      diagnostics = true,
+    },
   },
   eslint = { format_on_save = true },
   gitsigns = {
-    code_actions = true,
-    non_lsp = true,
+    null_ls = {
+      code_actions = true,
+    },
   },
   lua_ls = {
     format_on_save = true,
@@ -29,8 +31,9 @@ local Clients = {
   },
   marksman = {},
   rubocop = {
-    diagnostics = true,
-    non_lsp = true
+    null_ls = {
+      diagnostics = true,
+    }
   },
   solargraph = {},
   terraformls = { format_on_save = true },
