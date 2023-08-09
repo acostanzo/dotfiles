@@ -1,8 +1,10 @@
 local clients = dofile(CWD() .. "clients.lua")
 
 local client_names = {}
-for client, _ in pairs(clients) do
-  table.insert(client_names, client)
+for client, config in pairs(clients) do
+  if not config.null_ls then
+    table.insert(client_names, client)
+  end
 end
 
 require("mason").setup()
