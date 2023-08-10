@@ -35,7 +35,7 @@ local Clients = {
       diagnostics = true,
     }
   },
-  solargraph = {},
+  solargraph = { format_on_save = true },
   terraformls = { format_on_save = true },
   vtsls = {},
   yamlls = {},
