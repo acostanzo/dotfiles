@@ -39,7 +39,6 @@ done
 
 # Gems for system
 Gems=(
-  "solargraph"
 )
 for Gem in "${Gems[@]}"; do
   if [ `gem list $Gem | grep -c $Gem` -eq 0 ]; then
