@@ -50,3 +50,6 @@ alias notes="cd ~/Projects/notes"
 # ngrok
 alias ngb="ngrok http --region=us --hostname=spinchoon.ngrok.io 3100 --scheme http --scheme https"
 alias ngw="ngrok http --region=us --hostname=spinchoon.ngrok.io 3101 --scheme http --scheme https"
+
+# buoy gangway
+alias gangway="/Users/acostanzo/Projects/BuoySoftware/Gangway/gangway.py"
