@@ -33,6 +33,10 @@ require("lazy").setup({
   "tpope/vim-projectionist",               -- :A to jump between spec and code
   "tpope/vim-surround",                    -- Extensive "surround" support for parentheses, quotes, tags, etc.
   "vim-test/vim-test",                     -- Run tests from within test file
+  {
+    "kdheepak/lazygit.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" }
+  }, -- Git UI
 
   -- Utilities: Customized Install
   { "kyazdani42/nvim-tree.lua",                 dependencies = { "kyazdani42/nvim-web-devicons" } },                  -- File Explorer
