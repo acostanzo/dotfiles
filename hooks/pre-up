@@ -9,7 +9,8 @@ tic "$HOME/.xterm-256color-italic.terminfo"
 
 # Homebrew requirements
 HomeBrewPackages=(
-  "reattach-to-user-namespace"
+  "reattach-to-user-namespace",
+  "lazygit"
 )
 for HomeBrewPackage in "${HomeBrewPackages[@]}"; do
   if [ `which $HomeBrewPackage | grep -c "not found"` -eq 0 ]; then
