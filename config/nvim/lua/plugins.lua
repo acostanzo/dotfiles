@@ -13,9 +13,10 @@ require("lazy").setup({
   "nvim-lua/plenary.nvim",        -- A Lua module for asynchronous programming using coroutines.
 
   -- LSP Management with mason
-  "jose-elias-alvarez/null-ls.nvim",
+  "jay-babu/mason-null-ls.nvim", -- Brige null_ls in Mason
   "mfussenegger/nvim-dap",
   "neovim/nvim-lspconfig",
+  "nvimtools/none-ls.nvim", -- Called as null_ls
   "rcarriga/nvim-dap-ui",
   "williamboman/mason-lspconfig.nvim",
   "williamboman/mason.nvim",
