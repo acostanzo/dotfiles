@@ -36,6 +36,7 @@ local Clients = {
     }
   },
   solargraph = { format_on_save = true },
+  tailwindcss = {},
   terraformls = { format_on_save = true },
   vtsls = {},
   yamlls = {},
