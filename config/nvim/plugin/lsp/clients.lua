@@ -40,7 +40,6 @@ local Clients = {
   terraformls = { format_on_save = true },
   vtsls = {},
   yamlls = {},
-
 }
 
 return Clients
