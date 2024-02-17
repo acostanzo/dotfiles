@@ -39,12 +39,12 @@ require("lazy").setup({
   }, -- Git UI
 
   -- Utilities: Customized Install
-  { "kyazdani42/nvim-tree.lua",                 dependencies = { "kyazdani42/nvim-web-devicons" } },                  -- File Explorer
-  { "lewis6991/gitsigns.nvim",                  dependencies = { "nvim-lua/plenary.nvim" } },                         -- Display Git indicators in gutter
-  { "nvim-lualine/lualine.nvim",                dependencies = { "kyazdani42/nvim-web-devicons", optional = true } }, -- Bottom status line
-  { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },                                                     -- Fuzzy find
-  { "nvim-telescope/telescope.nvim",            dependencies = { "nvim-lua/plenary.nvim" } },                         -- Fuzzy find
-  { "nvim-treesitter/nvim-treesitter",          build = ":TSUpdate" },                                                -- Tree Sitter syntax highlighting
+  { "kyazdani42/nvim-tree.lua",                 dependencies = { "kyazdani42/nvim-web-devicons" } }, -- File Explorer
+  { "lewis6991/gitsigns.nvim",                  dependencies = { "nvim-lua/plenary.nvim" } },        -- Display Git indicators in gutter
+  { "nvim-lualine/lualine.nvim",                dependencies = { "kyazdani42/nvim-web-devicons" } }, -- Bottom status line
+  { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },                                    -- Fuzzy find
+  { "nvim-telescope/telescope.nvim",            dependencies = { "nvim-lua/plenary.nvim" } },        -- Fuzzy find
+  { "nvim-treesitter/nvim-treesitter",          build = ":TSUpdate" },                               -- Tree Sitter syntax highlighting
 
   -- Themes
   "EdenEast/nightfox.nvim",
