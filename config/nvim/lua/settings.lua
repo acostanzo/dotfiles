@@ -51,3 +51,6 @@ vim.opt.spelllang = "en"
 
 -- Single status bar line
 vim.opt.laststatus = 3
+
+-- Collapse the command line
+vim.opt.cmdheight = 0
