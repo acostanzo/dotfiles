@@ -33,6 +33,7 @@ alias gpr="git pull --rebase origin"
 alias grbi="git rebase -i"
 alias gf="git fetch -p"
 alias gpo="git push origin"
+alias lg="LazyGit"
 
 # Navigation
 alias dots="cd ~/dotfiles"
