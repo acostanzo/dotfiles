@@ -11,6 +11,11 @@ local Clients = {
       code_actions = true,
     },
   },
+  htmlbeautifier = {
+    null_ls = {
+      formatting = true
+    }
+  },
   lua_ls = {
     format_on_save = true,
     lspconfig_settings = {
