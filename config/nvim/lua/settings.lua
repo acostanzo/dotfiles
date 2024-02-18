@@ -1,5 +1,5 @@
 -- Customize leader key
-vim.g.mapleader = ","
+vim.g.mapleader = " "
 
 -- Copy to system clipboard
 vim.opt.clipboard = "unnamed"
