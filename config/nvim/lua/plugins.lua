@@ -22,17 +22,19 @@ require("lazy").setup({
   "williamboman/mason.nvim",
 
   -- Utilities: As-is
-  "arkav/lualine-lsp-progress",            -- Lualine plugin for LSP index progress
-  "christoomey/vim-tmux-navigator",        -- Seamless Tmux
-  "jghauser/mkdir.nvim",                   -- Make directories when saving file
-  "mogelbrod/vim-jsonpath",                -- Easily view the full dot path of a JSON node
-  "nvim-telescope/telescope-symbols.nvim", -- Lualine plugin for LSP index progress
-  "onsails/lspkind-nvim",                  -- Pictograms for built-in LSP
-  "terrortylor/nvim-comment",              -- Language based commenting
-  "tpope/vim-fugitive",                    -- Git commands - most notably :Gblame
-  "tpope/vim-projectionist",               -- :A to jump between spec and code
-  "tpope/vim-surround",                    -- Extensive "surround" support for parentheses, quotes, tags, etc.
-  "vim-test/vim-test",                     -- Run tests from within test file
+  "arkav/lualine-lsp-progress",              -- Lualine plugin for LSP index progress
+  "christoomey/vim-tmux-navigator",          -- Seamless Tmux
+  "jghauser/mkdir.nvim",                     -- Make directories when saving file
+  'jonarrien/telescope-cmdline.nvim',        -- Command line in telescope overlay
+  "mogelbrod/vim-jsonpath",                  -- Easily view the full dot path of a JSON node
+  "nvim-telescope/telescope-symbols.nvim",   -- Pictograms for built-in LSP
+  "nvim-telescope/telescope-ui-select.nvim", -- NVIM UI in telescope
+  "onsails/lspkind-nvim",                    -- Lualine plugin for LSP index progress
+  "terrortylor/nvim-comment",                -- Language based commenting
+  "tpope/vim-fugitive",                      -- Git commands - most notably :Gblame
+  "tpope/vim-projectionist",                 -- :A to jump between spec and code
+  "tpope/vim-surround",                      -- Extensive "surround" support for parentheses, quotes, tags, etc.
+  "vim-test/vim-test",                       -- Run tests from within test file
   {
     "kdheepak/lazygit.nvim",
     dependencies = { "nvim-lua/plenary.nvim" }
