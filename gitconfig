@@ -31,3 +31,8 @@
   email = memberships@acostanzo.com
 [pull]
 	ff = only
+[maintenance]
+	repo = /Users/acostanzo/dotfiles
+	repo = /Users/acostanzo/Projects/BuoySoftware/BuoyRails
+	repo = /Users/acostanzo/Projects/BuoySoftware/Wharf
+	repo = /Users/acostanzo/Projects/BuoySoftware/Parachute
