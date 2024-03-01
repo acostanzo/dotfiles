@@ -10,6 +10,7 @@ tic "$HOME/.xterm-256color-italic.terminfo"
 # Homebrew requirements
 HomeBrewPackages=(
   "lazygit",
+  "git-absorb",
   "reattach-to-user-namespace"
 )
 for HomeBrewPackage in "${HomeBrewPackages[@]}"; do
