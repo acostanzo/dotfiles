@@ -7,7 +7,7 @@ KB("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>")
 KB("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>")
 KB("n", "<C-b>", "<cmd>lua require('telescope.builtin').buffers()<cr>")
 KB("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>")
-KB('n', ':', ':Telescope cmdline<CR>', { noremap = true, desc = "Cmdline" })
+KB('n', '<leader><leader>', ':Telescope cmdline<CR>', { noremap = true, desc = "Cmdline" })
 
 telescope.setup({
   defaults = {
