@@ -8,19 +8,7 @@ reset -Q
 tic "$HOME/.xterm-256color-italic.terminfo"
 
 # Homebrew requirements
-HomeBrewPackages=(
-  "lazygit",
-  "git-absorb",
-  "overmind",
-  "reattach-to-user-namespace"
-)
-for HomeBrewPackage in "${HomeBrewPackages[@]}"; do
-  if [ `which $HomeBrewPackage | grep -c "not found"` -eq 0 ]; then
-    brew install $HomeBrewPackage
-  else
-    brew upgrade $HomeBrewPackage
-  fi
-done
+brew bundle --no-lock
 
 # Install tmux package manager
 TPMPath="$HOME/.tmux/plugins/tpm"

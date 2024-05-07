@@ -1,0 +1,7 @@
+brew "gh"
+brew "git"
+brew "lazygit"
+brew "neovim"
+brew "overmind"
+brew "reattach-to-user-namespace"
+brew "ripgrep"
