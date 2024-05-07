@@ -11,6 +11,7 @@ tic "$HOME/.xterm-256color-italic.terminfo"
 HomeBrewPackages=(
   "lazygit",
   "git-absorb",
+  "overmind",
   "reattach-to-user-namespace"
 )
 for HomeBrewPackage in "${HomeBrewPackages[@]}"; do
