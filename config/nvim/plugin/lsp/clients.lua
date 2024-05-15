@@ -1,10 +1,4 @@
 local Clients = {
-  cspell = {
-    null_ls = {
-      code_actions = true,
-      diagnostics = true,
-    },
-  },
   eslint = { format_on_save = true },
   gitsigns = {
     null_ls = {
