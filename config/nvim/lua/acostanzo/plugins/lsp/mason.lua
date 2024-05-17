@@ -27,20 +27,21 @@ return {
 		mason_lspconfig.setup({
 			-- list of servers for mason to install
 			ensure_installed = {
-				"tsserver",
-				"html",
 				"cssls",
-				"tailwindcss",
-				"lua_ls",
 				"graphql",
+				"html",
+				"lua_ls",
+				"solargraph",
+				"tailwindcss",
+				"tsserver",
 			},
 		})
 
 		mason_tool_installer.setup({
 			ensure_installed = {
+				"eslint_d", -- faster eslint
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
-				"eslint_d",
 			},
 		})
 	end,
