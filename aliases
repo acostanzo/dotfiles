@@ -1,39 +1,10 @@
 # Unix
-alias ls="ls -G"
-alias ll="ls -al"
-alias ln="ln -v"
+alias ls="ls --color"
 alias mkdir="mkdir -p"
 alias vim="nvim"
-alias e="$EDITOR"
-alias v="$VISUAL"
-
-# Bundler
-alias b="bundle"
-
-# Rails
-alias migrate="bin/rails db:migrate db:rollback && bin/rails db:migrate db:test:prepare"
-alias s="rspec"
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'# Restart webcam
-
-# What the fuck camera?! for when mac hardware camera stops working
-alias wtfc="sudo killall VDCAssistant"
-
-# Byndle exec rake
-alias brake="bundle exec rake"
-
-# Setup all the test DB stuffs
-alias rdm="brake db:migrate; brake db:test:prepare; brake parallel:prepare"
-
-# Git
-alias gb="git branch"
-alias gco="git checkout"
-alias gpr="git pull --rebase origin"
-alias grbi="git rebase -i"
-alias gf="git fetch -p"
-alias gpo="git push origin"
-alias lg="LazyGit"
 
 # Navigation
 alias dots="cd ~/dotfiles"
@@ -47,6 +18,16 @@ alias lsw="cd ~/Projects/BuoySoftware/Wharf"
 alias lsri="cd ~/Projects/BuoySoftware/Rigger"
 alias lss="cd ~/Projects/BuoySoftware/LifesaverSupport"
 alias notes="cd ~/Projects/notes"
+
+# Git
+alias g="git status"
+alias gb="git branch"
+alias gco="git checkout"
+alias gf="git fetch -p"
+alias gpo="git push origin"
+alias gpr="git pull --rebase origin"
+alias grbi="git rebase -i"
+alias lg="LazyGit"
 
 # ngrok
 alias ngb="ngrok http --region=us --hostname=spinchoon.ngrok.io 3100 --scheme http --scheme https"
