@@ -54,3 +54,7 @@ alias ngw="ngrok http --region=us --hostname=spinchoon.ngrok.io 3101 --scheme ht
 
 # buoy gangway
 alias gangway="/Users/acostanzo/Projects/BuoySoftware/Gangway/gangway.py"
+
+# Overmind shortcuts
+alias oms="overmind start -f Procfile.dev"
+alias omc="overmind connect"
