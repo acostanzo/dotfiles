@@ -1,4 +1,2 @@
-require("utilities")
-require("settings")
-require("plugin-manager")
-require("plugins")
+require("acostanzo.core")
+require("acostanzo.lazy")
