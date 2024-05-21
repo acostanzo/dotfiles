@@ -1,3 +1,5 @@
+tap "homebrew/cask-fonts"
+
 brew "fzf"
 brew "gh"
 brew "git"
@@ -7,3 +9,6 @@ brew "overmind"
 brew "reattach-to-user-namespace"
 brew "ripgrep"
 brew "zoxide"
+
+cask "alacritty"
+cask "font-meslo-lg-nerd-font"
