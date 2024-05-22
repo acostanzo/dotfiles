@@ -1,5 +1,6 @@
 # Unix
 alias ls="ls --color"
+alias ll="ls -al"
 alias mkdir="mkdir -p"
 alias vim="nvim"
 
