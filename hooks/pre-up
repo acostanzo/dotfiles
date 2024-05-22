@@ -4,9 +4,6 @@ touch "$HOME"/.psqlrc.local
 
 reset -Q
 
-# Enable italics in terminal
-tic "$HOME/.xterm-256color-italic.terminfo"
-
 # Homebrew requirements
 brew bundle --no-lock
 
