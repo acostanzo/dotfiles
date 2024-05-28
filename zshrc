@@ -89,6 +89,9 @@ export GOPATH="$HOME/go"
 export TERM=xterm-256color
 export EDITOR=nvim
 
+# Config path
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # Postgres setup
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/postgresql@15/lib"

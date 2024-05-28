@@ -20,8 +20,6 @@ opt.smartcase = true -- if you include mixed case in your search, assumes you wa
 -- cursorline
 opt.cursorline = true
 
--- turn on termguicolors for tokyonight colorscheme to work
--- (have to use iterm2 or any other true color terminal)
 opt.termguicolors = true
 opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 
