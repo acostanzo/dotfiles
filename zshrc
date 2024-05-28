@@ -90,10 +90,10 @@ export TERM=xterm-256color
 export EDITOR=nvim
 
 # Postgres setup
-export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/postgresql@13/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/postgresql@13/include"
-export PKG_CONFIG_PATH="/opt/homebrew/opt/postgresql@13/lib/pkgconfig"
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/postgresql@15/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/postgresql@15/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/postgresql@15/lib/pkgconfig"
 
 # Android Development
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk

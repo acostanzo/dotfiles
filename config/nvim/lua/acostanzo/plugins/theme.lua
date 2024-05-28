@@ -4,7 +4,7 @@ return {
 	-- Optional; default configuration will be used if setup isn't called.
 	config = function()
 		require("catppuccin").setup({
-			flavour = "macchiato",
+			flavour = "frappe",
 		})
 
 		vim.cmd("colorscheme catppuccin")

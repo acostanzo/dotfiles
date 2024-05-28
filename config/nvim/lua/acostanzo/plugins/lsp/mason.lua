@@ -39,9 +39,9 @@ return {
 
 		mason_tool_installer.setup({
 			ensure_installed = {
-				"eslint_d", -- faster eslint
-				"prettier", -- prettier formatter
-				"stylua", -- lua formatter
+				"eslint",
+				"prettier",
+				"stylua",
 			},
 		})
 	end,
