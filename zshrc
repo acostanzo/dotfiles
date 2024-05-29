@@ -23,14 +23,13 @@ zinit light Aloxaf/fzf-tab
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-syntax-highlighting
+zinit ice depth=1
+zinit light jeffreytse/zsh-vi-mode
 
 # Add in snippets
 zinit snippet OMZP::command-not-found
 
 zinit cdreplay -q
-
-# Keybindings
-bindkey -v # esc | vim mode
 
 # History
 HISTSIZE=5000
