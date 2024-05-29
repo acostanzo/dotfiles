@@ -9,6 +9,7 @@ brew "neovim"
 brew "overmind"
 brew "reattach-to-user-namespace"
 brew "ripgrep"
+brew "starship"
 brew "zoxide"
 
 cask "alacritty"
