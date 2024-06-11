@@ -67,6 +67,10 @@ zinit light jeffreytse/zsh-vi-mode
 zinit ice pick"async.zsh" src"pure.zsh" # with zsh-async library that's bundled with it.
 zinit light sindresorhus/pure
 
+# search history with fzf
+zinit ice lucid wait'0'
+zinit light joshskidmore/zsh-fzf-history-search
+
 # Completion styling
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' menu no
@@ -78,4 +82,6 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
+# Setup fzf
+export FZF_DEFAULT_OPTS='--tmux 80%'
 source <(fzf --zsh)
