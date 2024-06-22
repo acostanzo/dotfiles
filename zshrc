@@ -85,3 +85,6 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 # Setup fzf
 export FZF_DEFAULT_OPTS='--tmux 80%'
 source <(fzf --zsh)
+
+# GPG commit signing setup
+export GPG_TTY=$(tty)

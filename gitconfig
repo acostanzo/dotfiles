@@ -20,6 +20,7 @@
   ff = only
 [commit]
   template = ~/.gitmessage
+	gpgsign = true
 [fetch]
   prune = true
 [rebase]
@@ -28,7 +29,8 @@
   colorMoved = zebra
 [user]
   name = "Anthony Costanzo"
-  email = memberships@acostanzo.com
+  email = mail@acostanzo.com
+	signingkey = F53936C5027780134F40153EE125BE579977B900
 [pull]
 	ff = only
 [maintenance]
@@ -36,3 +38,10 @@
 	repo = /Users/acostanzo/Projects/BuoySoftware/BuoyRails
 	repo = /Users/acostanzo/Projects/BuoySoftware/Wharf
 	repo = /Users/acostanzo/Projects/BuoySoftware/Parachute
+[gpg]
+	program = /opt/homebrew/bin/gpg
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
