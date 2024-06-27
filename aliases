@@ -31,8 +31,8 @@ alias grbi="git rebase -i"
 alias lg="LazyGit"
 
 # ngrok
-alias ngb="ngrok http --region=us --hostname=spinchoon.ngrok.io 3100 --scheme http --scheme https"
-alias ngw="ngrok http --region=us --hostname=spinchoon.ngrok.io 3101 --scheme http --scheme https"
+alias ngb="ngrok http http://lvh.me:3100"
+alias ngw="ngrok http http://lvh.me:3101"
 
 # buoy gangway
 alias gangway="/Users/acostanzo/Projects/BuoySoftware/Gangway/gangway.py"
