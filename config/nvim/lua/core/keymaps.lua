@@ -21,9 +21,6 @@ keymap.set("n", "<leader>Tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  
 keymap.set("n", "<leader>Tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>Tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
--- current path edit helper
-keymap.set("n", "<leader>h", ":e %:h")
-
 -- blame file
 keymap.set("n", "<leader>gb", "<cmd>BlameToggle window<CR>", { desc = " Toggle git blame window" })
 keymap.set("n", "<leader>gB", "<cmd>BlameToggle virtual<CR>", { desc = " Toggle git blame virtual" })
