@@ -1,2 +1,1 @@
-require("acostanzo.core")
-require("acostanzo.lazy")
+require("core")
