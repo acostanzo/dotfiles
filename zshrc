@@ -76,8 +76,6 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' menu no
 zstyle ':completion:*:descriptions' format '[%d]'
 zstyle ':completion:*:git-checkout:*' sort false
-zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
-zstyle ':fzf-tab:*' switch-group '<' '>'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
@@ -85,6 +83,9 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 # Setup fzf
 export FZF_DEFAULT_OPTS='--tmux 80%'
 source <(fzf --zsh)
+
+# Setup zoxide
+eval "$(zoxide init zsh)"
 
 # GPG commit signing setup
 export GPG_TTY=$(tty)

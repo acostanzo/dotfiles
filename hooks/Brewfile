@@ -1,4 +1,5 @@
 brew "bat"
+brew "eza"
 brew "fzf"
 brew "gh"
 brew "git"
@@ -7,6 +8,7 @@ brew "neovim"
 brew "overmind"
 brew "reattach-to-user-namespace"
 brew "ripgrep"
+brew "zoxide"
 
 cask "alacritty"
 cask "font-meslo-lg-nerd-font"
