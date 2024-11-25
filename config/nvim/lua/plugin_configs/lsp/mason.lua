@@ -33,7 +33,7 @@ return {
 				"lua_ls",
 				"solargraph",
 				"tailwindcss",
-				"tsserver",
+				"ts_ls",
 			},
 		})
 
