@@ -8,6 +8,7 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 export GOPATH="$HOME/go"
 export TERM=xterm-256color
 export EDITOR=nvim
+export VISUAL=nvim
 
 # Config path
 export XDG_CONFIG_HOME="$HOME/.config"
